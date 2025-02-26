@@ -58,12 +58,12 @@ export function Home() {
     <div>
       <Header />
 
-      <div className="max-w-[960px] w-full m-auto flex flex-col px-[20px] lg:flex-row lg:justify-between lg:px-[32px]">
-        <p className="text-[20px] mb-[24px] font-medium text-[#1C1C1C] lg:mb-[0]">
+      <div className="max-w-[60rem] w-full m-auto flex flex-col px-[1.25rem] lg:flex-row lg:justify-between lg:px-[2rem]">
+        <p className="text-[1.25rem] mb-[1.5rem] font-medium text-[black] lg:mb-[0]">
           Funcionários
         </p>
         <input
-          className="relative border-[1px] border-[#DFDFDF] rounded-[8px] py-[12px] px-[16px] w-full outline-none bg-[white] bg-[url('/Search.png')] bg-no-repeat bg-[position:calc(100%-16px)] lg:max-w-[287px]"
+          className="relative border-[0.063rem] border-[lightGray] rounded-[0.5rem] py-[0.75rem] px-[1rem] w-full outline-none bg-[white] bg-[url('/Search.png')] bg-no-repeat bg-[position:calc(100%-1rem)] lg:max-w-[17.938rem]"
           type="text"
           placeholder="Pesquisar"
           value={input}
@@ -71,42 +71,42 @@ export function Home() {
         />
       </div>
 
-      <div className="max-w-[960px] w-full m-auto flex justify-between items-center mt-[20px] px-[20px] lg:mt-[32px] lg:px-[32px]">
+      <div className="max-w-[60rem] w-full m-auto flex justify-between items-center mt-[1.25rem] px-[1.25rem] lg:mt-[2rem] lg:px-[2rem]">
         <div className="w-full">
-          <div className="shadow-2xs bg-[white] rounded-[8px] mb-7 overflow-x-auto lg:mb-0">
+          <div className="shadow-2xs bg-[white] rounded-[0.5rem] mb-7 overflow-x-auto lg:mb-0">
             {filterEmployees.length > 0 ? (
               <table className="w-full table-fixed ">
                 <thead className="bg-[blue]">
-                  <tr className="relative h-[47px]">
-                    <th className="text-left text-[white] text-[16px] font-medium px-[16px] uppercase rounded-tl-[8px] border-collapse">
+                  <tr className="relative h-[2.938rem]">
+                    <th className="text-left text-[white] text-[1rem] font-medium px-[1rem] uppercase rounded-tl-[0.5rem] border-collapse">
                       Foto
                     </th>
-                    <th className="text-left text-[white] text-[16px] font-medium uppercase ">
+                    <th className="text-left text-[white] text-[1rem] font-medium uppercase ">
                       Nome
                     </th>
-                    <th className="hidden text-left text-[white] text-[16px] font-medium uppercase lg:table-cell">
+                    <th className="hidden text-left text-[white] text-[1rem] font-medium uppercase lg:table-cell">
                       Cargo
                     </th>
-                    <th className="hidden text-left text-[white] text-[16px] font-medium uppercase lg:table-cell">
+                    <th className="hidden text-left text-[white] text-[1rem] font-medium uppercase lg:table-cell">
                       Data de Admissão
                     </th>
-                    <th className="hidden text-left text-[white] text-[16px] font-medium uppercase rounded-tr-[8px] border-collapse lg:table-cell">
+                    <th className="hidden text-left text-[white] text-[1rem] font-medium uppercase rounded-tr-[0.5rem] border-collapse lg:table-cell">
                       Telefone
                     </th>
 
-                    <th className="rounded-tr-[8px] border-collapse lg:hidden">
-                      <img src={Circle} alt="Circle - Icon" className="absolute right-[28px] top-[19px] bottom-[19px] lg:hidden" />
+                    <th className="rounded-tr-[0.5rem] border-collapse lg:hidden">
+                      <img src={Circle} alt="Circle - Icon" className="absolute right-[1.75rem] top-[1.188rem] bottom-[1.188rem] lg:hidden" />
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {filterEmployees.map((employee, index) => (
-                    <tr key={index} className="relative h-[49px] shadow-2xs">
-                      <td className="px-[16px]">
+                    <tr key={index} className="relative h-[3.063rem] shadow-2xs">
+                      <td className="px-[1rem]">
                         <img
                           src={employee.image}
                           alt={employee.name}
-                          className="w-[34px] h-[34px] rounded-full"
+                          className="w-[2.125rem] h-[2.125rem] rounded-full"
                         />
                       </td>
                       <td>{employee.name}</td>
@@ -115,7 +115,7 @@ export function Home() {
                       <td className="hidden lg:table-cell">{formatPhoneNumber(employee.phone)}</td>
 
                       <button
-                        className="absolute right-[16px] top-[12px] bottom-[12px] cursor-pointer lg:hidden"
+                        className="absolute right-[1rem] top-[0.75rem] bottom-[0.75rem] cursor-pointer lg:hidden"
                         onClick={() => handleToggleModalEmployess(employee)}
                       >
                         <img src={Arrow} alt="Arrow - Modal" />
@@ -125,7 +125,7 @@ export function Home() {
                 </tbody>
               </table>
             ) : (
-              <div className="flex justify-center items-center flex-col py-5 text-center text-[#1C1C1C]">
+              <div className="flex justify-center items-center flex-col py-5 text-center text-[black]">
                 <img src={SearchError} alt="Icone - Erro" />
                 <p>Nenhum funcionário encontrado.</p>
               </div>

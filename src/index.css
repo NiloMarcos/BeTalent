@@ -2,7 +2,7 @@
 
 @theme {
   --shadow-3xl: 0 2px 8px rgba(0, 0, 0, 0.2); 
-  --shadow-tab: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --shadow-tab: rgba(149, 157, 165, 0.2) 0px 8px 1.5rem;
 }
 
 body {
